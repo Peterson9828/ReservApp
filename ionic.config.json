@@ -1,0 +1,7 @@
+{
+  "name": "ReservAPP",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

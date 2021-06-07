@@ -1,0 +1,65 @@
+<ion-content>
+  <div class="contenedor" *ngIf="ayunta">
+    <ion-item class="border">
+      <ion-avatar>
+        <img class="img" [src]="ayunta.foto">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ayunta.nombre}}</h2>
+        <p>
+          <span class="content__border--telefono">
+            <ion-icon class="content__border--icon" name="call-outline"></ion-icon>
+            <ion-label>{{ayunta.telefono}}</ion-label>
+          </span>
+        </p>
+
+        <p>
+          <span class="content__border--telefono">
+            <ion-icon class="content__border--icon" name="mail-outline"></ion-icon>
+            <ion-label>{{ayunta.correo}}</ion-label>
+          </span>
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-label class="content__info">{{ayunta.info}}</ion-label>
+
+    <ion-row class="border margin">
+      <ion-col>
+        <ion-label>
+          <h2>Instalaciones</h2>
+        </ion-label>
+        <ion-row *ngFor="let datos of ayunta.instalaciones">
+          <ion-label class="deportes">
+            <p>{{datos}} {{ayunta[datos].length}}</p>
+          </ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-label>
+          <h2>Servicios</h2>
+        </ion-label>
+        <ion-row *ngFor="let datos of ayunta.servicios">
+          <ion-label>
+            <p>{{datos}}</p>
+          </ion-label>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <div *ngIf="ayunta">
+      <div class="direccion">
+        <ion-label>Direccion</ion-label>
+      </div>
+
+      <div class="txtDireccion">
+        <ion-label>{{ayunta.direccion}}, {{ayunta.cp}}, {{ayunta.localidad}}</ion-label>
+        <ion-label class="comoLlegar" (click)="comoLlegar()">¿Cómo llegar?</ion-label>
+      </div>
+    </div>
+
+    <div #map id="map"></div>
+
+  </div>
+
+</ion-content>

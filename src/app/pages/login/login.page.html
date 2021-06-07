@@ -1,0 +1,45 @@
+
+<ion-content>
+  <div class="contenedor">
+    <div class="contenedor__logo centro">
+      <img class="contenedor__logo-img" src="../../../assets/img/logo.png" alt="">
+    </div>
+
+    <div class="contenedor__inputs">
+      <ion-item>
+        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-input type="email" [(ngModel)]="usuario.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="usuario.password"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="contenedor__botonLogin">
+      <ion-button class="contenedor__botonLogin-button" color="primary" (click)="login()">ENTRAR</ion-button>
+    </div>
+
+    <div class="contenedor__logWith">
+      <ion-chip class="logWith__div centro" (click)="loginGoogle()">
+        <ion-avatar>
+          <img src="../../../assets/img/google.png" alt="">
+        </ion-avatar>
+        <ion-label>Sign in with Google</ion-label>
+      </ion-chip>
+<!-- 
+      <ion-chip class="logWith__div centro" (click)="loginFacebook()">
+        <ion-avatar>
+          <img src="../../../assets/img/facebook.png" alt="">
+        </ion-avatar>
+        <ion-label>Sign in with Facebook</ion-label>
+      </ion-chip> -->
+    </div>
+
+    <div class="contenedor__registro">
+      <ion-label>¿Aún no eres uno de nosotros? <a (click)="goToRegister()">¡Regístrate!</a></ion-label>
+    </div>
+  </div>
+
+</ion-content>

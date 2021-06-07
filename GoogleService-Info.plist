@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>CLIENT_ID</key>
+		<string>112522663501-9cgk3jb4l1hhn57rnbmke9ut8lvhf53i.apps.googleusercontent.com</string>
+		<key>REVERSED_CLIENT_ID</key>
+		<string>com.googleusercontent.apps.112522663501-9cgk3jb4l1hhn57rnbmke9ut8lvhf53i</string>
+		<key>ANDROID_CLIENT_ID</key>
+		<string>112522663501-bmefhjt0gb40uctgb17nlq5ci2klso5a.apps.googleusercontent.com</string>
+		<key>API_KEY</key>
+		<string>AIzaSyCuH78DsY7tf7seYSSsYdgdyxBQXKpNOmw</string>
+		<key>GCM_SENDER_ID</key>
+		<string>112522663501</string>
+		<key>PLIST_VERSION</key>
+		<string>1</string>
+		<key>BUNDLE_ID</key>
+		<string>ReservAPP.JTM</string>
+		<key>PROJECT_ID</key>
+		<string>reservapp-13e8f</string>
+		<key>STORAGE_BUCKET</key>
+		<string>reservapp-13e8f.appspot.com</string>
+		<key>IS_ADS_ENABLED</key>
+		<false></false>
+		<key>IS_ANALYTICS_ENABLED</key>
+		<false></false>
+		<key>IS_APPINVITE_ENABLED</key>
+		<true></true>
+		<key>IS_GCM_ENABLED</key>
+		<true></true>
+		<key>IS_SIGNIN_ENABLED</key>
+		<true></true>
+		<key>GOOGLE_APP_ID</key>
+		<string>1:112522663501:ios:76873e2cba663f52706e04</string>
+		<key>DATABASE_URL</key>
+		<string>https://reservapp-13e8f.firebaseio.com</string>
+
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>fb349765876298085</string>
+				</array>
+			</dict>
+		</array>
+		<!-- <key>FacebookAppID</key>
+		<string>349765876298085</string>
+		<key>FacebookDisplayName</key> -->
+		<string>ReservAPP</string>
+	</dict>
+</plist>

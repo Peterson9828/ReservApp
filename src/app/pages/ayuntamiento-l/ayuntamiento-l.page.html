@@ -1,0 +1,13 @@
+<ion-menu-button slot="start" color="primary" menu="mainMenu"></ion-menu-button>
+<ion-content>
+  <div class="contenedor">
+    <ion-list class="border" *ngIf="ayuntamientosL">
+      <ion-item *ngFor="let ayuntamiento of ayuntamientosL" (click)="goToAyunta(ayuntamiento.nombre)">
+        <ion-avatar>
+          <img [src]="ayuntamiento.foto">
+        </ion-avatar>
+        <ion-label>{{ayuntamiento.nombre}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

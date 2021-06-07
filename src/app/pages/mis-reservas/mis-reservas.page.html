@@ -1,0 +1,46 @@
+<ion-menu-button slot="start" color="primary" menu="mainMenu"></ion-menu-button>
+
+<ion-content>
+
+  <div class="contenedor" *ngIf="si">
+    <div class="contenedor__item" *ngFor="let reserva of reservas; let i = index">
+      <!-- <div class="contenedor__content"> -->
+      <div class="contenedor__item-avatar">
+        <ion-avatar *ngIf="ayuntas[i].foto">
+          <img [src]="ayuntas[i].foto">
+        </ion-avatar>
+      </div>
+
+      <div class="contenedor__item-info">
+        <div class="contenedor__item-ayunta">
+          <ion-label>
+            <h2>{{reserva.idAyuntamiento}}</h2>
+          </ion-label>
+        </div>
+
+        <div class="contenedor__item-dhp">
+          <div class="contenedor__item-diaHora">
+            <ion-label>
+              <p>Dia {{reserva.dia}}</p>
+              <p>A las {{reserva.hora.hora}}</p>
+            </ion-label>
+          </div>
+
+          <div class="contenedor__item-nPista">
+            <ion-label>
+              <p class="contenedor__item-deporte">{{reserva.deporte}}</p>
+              <p>Pista {{reserva.pista}}</p>
+            </ion-label>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <div class="contenedor__button">
+        <ion-button class="contenedor__button-button" color="danger" (click)="cancelarReserva(reserva.id, i)">Cancelar
+          reserva</ion-button>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

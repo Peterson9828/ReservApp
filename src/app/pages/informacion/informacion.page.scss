@@ -1,0 +1,57 @@
+#map {
+    width: 100%;
+    height: 125px;
+}
+
+ion-avatar {
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.margin{
+    margin-top: 7px;
+}
+
+.content__border--icon {
+    margin-right: 5px;
+}
+
+.content__border--telefono {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor {
+    padding: 7px;
+}
+
+.content__info{
+    font-size: 14px;
+}
+
+.border {
+    margin-bottom: 7px !important;
+    --border-color: transparent !important;
+    --highlight-height: 0;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+}
+
+.deportes::first-letter {
+    text-transform: uppercase;
+}
+
+.txtDireccion {
+    display: flex;
+    justify-content: space-between;
+    // margin-top: 40px;
+    margin-bottom: 7px;
+    font-size: 11px;
+    color: #808080;
+}
+
+.comoLlegar {
+    font-size: 11px;
+    color: #808080;
+    // margin-top: -35px;
+}

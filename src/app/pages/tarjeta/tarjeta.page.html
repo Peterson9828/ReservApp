@@ -1,0 +1,26 @@
+<ion-content style="text-align: center;">
+  <div class="content__imgDep" *ngFor="let datos of deportes" (click)="verHorario(datos)">
+    <img class="content__imgDep-img" src="../../../assets/Deportes/{{datos}}.jpg">
+    <ion-label class="content__imgDep-label">{{datos}}</ion-label>
+  </div>
+
+  <div class="content__footer"></div>
+
+  <div class="content__informacion">
+    <div class="content__informacion-div">
+      <ion-fab class="fab" vertical="bottom" (click)="informacion()">
+        <ion-fab-button class="content__informacion-ionFabButton">
+          <ion-label>Informacion</ion-label>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+  </div>
+
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="llamar(ayunta.telefono)">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

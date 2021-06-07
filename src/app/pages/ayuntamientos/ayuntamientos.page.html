@@ -1,0 +1,21 @@
+<ion-menu-button slot="start" color="primary" menu="mainMenu"></ion-menu-button>
+
+<ion-content>
+
+  <div class="contenedor">
+    <ion-searchbar class="contenedor__busqueda-searchbar"
+    (ionInput)="getItems($event)" placeholder="Buscar"cancelButtonIcon></ion-searchbar>
+    <ion-list class="border">
+      <ion-item *ngFor="let ayuntamiento of items" (click)="goToAyunta(ayuntamiento.nombre)">
+        <ion-avatar>
+          <img [src]="ayuntamiento.foto">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ayuntamiento.nombre}}</h2>
+          <p>({{ayuntamiento.localidad}})</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

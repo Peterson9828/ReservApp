@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-menu menuId="mainMenu" content-id="main">
+    <!-- <ion-header>
+      <ion-toolbar>
+        <ion-title>{{this.userService.nombre}} {{this.userService.apellidos}}</ion-title>
+      </ion-toolbar>
+    </ion-header> -->
+
+    <ion-content>
+      <div class="header">
+        <ion-label>{{this.userService.nombre}} {{this.userService.apellidos}}</ion-label>
+      </div>
+      <ion-list>
+        <ion-menu-toggle *ngFor="let list of menuPages">
+          <ion-item routerLink="{{list.url}}">
+            <ion-icon name="{{list.icon}}" slot="start"></ion-icon>
+            <ion-label>{{list.title}}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle *ngFor="let list1 of log">
+          <ion-item (click)="logOut()" routerLink="{{list1.url}}">
+            <ion-icon name="{{list1.icon}}" slot="start"></ion-icon>
+            <ion-label>{{list1.title}}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

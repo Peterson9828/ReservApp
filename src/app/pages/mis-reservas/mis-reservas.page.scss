@@ -1,0 +1,57 @@
+.contenedor__item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    border: solid 1px #dedede;
+    border-radius: 6px;
+    padding: 7px;
+    width: 100%;
+}
+
+ion-avatar {
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.contenedor {
+    padding: 7px;
+}
+
+.contenedor__content{
+    width: 100%;
+}
+
+.contenedor__item-avatar {
+    width: 89px;
+}
+
+.contenedor__item-info {
+    flex: 1 1 auto;
+
+}
+
+.contenedor__item-dhp{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor__item-diaHora {
+    flex: 1 2 auto;
+}
+
+.contenedor__item-nPista {
+    flex: 1 2 auto;
+}
+
+.contenedor__item-deporte{
+    text-transform: capitalize;
+}
+
+.contenedor__button{
+    text-align: center;
+    width: 100%;
+}
+
+.contenedor__button-button{
+    width: 99%;
+}

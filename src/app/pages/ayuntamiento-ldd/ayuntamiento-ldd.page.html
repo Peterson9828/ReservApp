@@ -1,0 +1,57 @@
+<ion-menu-button slot="start" color="primary" menu="mainMenu"></ion-menu-button>
+
+<ion-content>
+  <div class="contenedor" *ngIf="ayuntamientosLDD">
+    <div class="contenedor__item" *ngFor="let ayuntamiento of ayuntamientosLDD;let i = index">
+      <div class="contenedor__nombreAvatar">
+        <ion-avatar class="contenedor__nombreAvatar--avatar">
+          <img src="{{ayuntamiento.foto}}">
+        </ion-avatar>
+        <div class="contenedor__nombreAvatar">
+          <ion-label class="contenedor-label">{{ayuntamiento.nombre}}</ion-label>
+          <div class="contenedor__nombreAvatar--pista">
+            <ion-label>{{ayuntamiento[ayuntaService.deporte + t]}}m</ion-label>
+            <ion-label *ngIf="coste[i]!='no' || !coste[i]" class="contenedor__nombreAvatar--label">{{coste[i]}}
+            </ion-label>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedor__horario" *ngFor="let pista of ayuntamiento[ayuntaService.deporte]">
+        <ion-label class="contenedor__horario-label">Pista {{pista}}</ion-label>
+        <div *ngFor="let horario of ayuntamiento[ayuntaService.deporte + pista]">
+          <div *ngIf="this.ayuntaService.dia == todayD">
+            <button class="contenedor__horario-buton"
+              (click)="indicarReserva(horario, pista, ayuntamiento.nombre, horario.coste)"
+              *ngIf="horario.hora > todayS">
+              {{horario.hora}}
+            </button>
+          </div>
+
+          <div *ngIf="this.ayuntaService.dia != todayD">
+            <button class="contenedor__horario-buton"
+              (click)="indicarReserva(horario, pista, ayuntamiento.nombre, horario.coste)">
+              {{horario.hora}}
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content__footer">
+
+  </div>
+
+  <div class="content__informacion">
+    <div class="content__informacion-div">
+      <ion-fab class="fab" vertical="bottom" (click)="reservar()">
+        <ion-fab-button class="content__informacion-ionFabButton">
+          <ion-label>Reservar</ion-label>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+  </div>
+
+</ion-content>

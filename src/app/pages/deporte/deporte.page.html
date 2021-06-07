@@ -1,0 +1,22 @@
+<ion-menu-button slot="start" color="primary" menu="mainMenu"></ion-menu-button>
+
+<ion-content>
+  <div class="contenedor">
+    <div class="contenedor__busqueda" [ngStyle]="estilo">
+      <ion-label class="contenedor__busqueda-label">¿A qué quieres jugar?</ion-label>
+      <ion-searchbar class="contenedor__busqueda-searchbar" (ionFocus)="subir()" (ionBlur)="bajar()"
+        (ionInput)="getItems($event)" placeholder="Buscar" [(ngModel)]="deporte" cancelButtonIcon></ion-searchbar>
+      <ion-list *ngIf="list">
+
+        <ion-item *ngFor="let datos of items" (click)="elegirDeporte(datos)">
+          <ion-label>{{datos}}</ion-label>
+        </ion-item>
+      </ion-list>
+      
+      <div class="contenedor__botones">
+        <ion-button (click)="buscar()">Buscar</ion-button>
+        <ion-button (click)="siguiente()">Elige día</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

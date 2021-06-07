@@ -1,0 +1,23 @@
+ion-item {
+    --inner-padding-end: 0px;
+    --padding-start: 0px;
+}
+
+ion-avatar {
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.contenedor {
+    padding: 7px;
+}
+
+.border {
+    ion-item {
+        margin-bottom: 7px!important;
+        --border-color: transparent!important;
+        --highlight-height: 0;
+        border: 1px solid #dedede;
+        border-radius: 6px;
+    }
+}

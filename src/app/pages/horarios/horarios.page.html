@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="content" *ngIf="ayuntaService.ayunta">
+    <ion-item class="content__item">
+      <ion-datetime placeholder="{{todayS}}" displayFormat="DD-MM-YY" pickerFormat="D MMMM YYYY" doneText="Hecho"
+        min="{{todayS}}" [(ngModel)]="fecha" (ionChange)="cambioFecha()"></ion-datetime>
+    </ion-item>
+
+    <div class="content__grid">
+      <div class="content__divs" *ngFor="let pistas of ayuntaService.ayunta[ayuntaService.deporte]; let i = index">
+        <div class="content__divs-pista">
+          <ion-label>Pista {{pistas}}</ion-label>
+          <div class="contenedor__nombreAvatar--pista">
+            <ion-label>{{ayuntaService.ayunta[ayuntaService.deporte + t]}}m</ion-label>
+            <ion-label *ngIf="coste[i]!='no' || !coste[i]" class="contenedor__nombreAvatar--label">{{coste[i]}}
+            </ion-label>
+          </div>
+        </div>
+
+        <div *ngIf="si" class="content__divs-ayunta">
+          <button class="content__divs-buton" (click)="indicarReserva(horario, pistas, ayuntaService.ayunta.nombre, horario.coste)"
+            [style.background-color]="estilos[pistas][i].color" [disabled]="estilos[pistas][i].disabled"
+            *ngFor="let horario of ayuntaService.ayunta[ayuntaService.deporte + pistas]; let i = index">{{horario.hora}}</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content__footer">
+
+  </div>
+
+  <div class="content__informacion">
+    <div class="content__informacion-div">
+      <ion-fab class="fab" vertical="bottom" (click)="reservar()">
+        <ion-fab-button class="content__informacion-ionFabButton">
+          <ion-label>Reservar</ion-label>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+  </div>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="llamar(ayuntaService.ayunta.telefono)">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

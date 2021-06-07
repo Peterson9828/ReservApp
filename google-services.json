@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "112522663501",
+    "firebase_url": "https://reservapp-13e8f.firebaseio.com",
+    "project_id": "reservapp-13e8f",
+    "storage_bucket": "reservapp-13e8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112522663501:android:2433520e5f063fd9706e04",
+        "android_client_info": {
+          "package_name": "com.ReservAPP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112522663501-6hps1ct8901q4tbl42bjhggs3us2k1rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB40vMWxn46GLsCw2rfjUX-8DC1gqO--c8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112522663501-6hps1ct8901q4tbl42bjhggs3us2k1rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,50 @@
+ion-item {
+    --inner-padding-end: 0px;
+    --padding-start: 0px;
+}
+
+.centro {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.contenedor__logo {
+    width: 100%;
+    // flex: 1 1 auto;
+}
+
+.contenedor__logo-img {
+    margin: 50px auto;
+    width: 100%;
+}
+
+.contenedor__inputs {
+    width: 100%;
+}
+
+.contenedor__botonLogin {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.contenedor__botonLogin-button {
+    width: 100%;
+}
+
+.logWith__div {
+    background: none;
+}
+
+.contenedor__registro {
+    text-align: center;
+}
